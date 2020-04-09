@@ -1,0 +1,38 @@
+---
+:started_at: 2020-04-08 21:54:22.129158000 -07:00
+:ended_at: 2020-04-08 21:54:22.134309000 -07:00
+:load_time_s: 0.165281
+:status: :passed_with_pending
+:executions:
+- :started_at: &1 2020-04-08 21:54:22.129580000 -07:00
+  :ended_at: &2 2020-04-08 21:54:22.129610000 -07:00
+  :failure: 
+  :duration_s: 3.0e-05
+  :status: :skipped
+  :file_path: "./samples/rspec/meme_spec.rb"
+  :line_number: 24
+  :fingerprint: Meme test that will be skipped
+- :started_at: 2020-04-08 21:54:22.130390000 -07:00
+  :ended_at: 2020-04-08 21:54:22.131541000 -07:00
+  :failure: 
+  :duration_s: 0.001151
+  :status: :passed
+  :file_path: "./samples/rspec/meme_spec.rb"
+  :line_number: 16
+  :fingerprint: Meme#i_can_has_cheezburger? is expected to eql "OHAI!"
+- :started_at: 2020-04-08 21:54:22.131876000 -07:00
+  :ended_at: 2020-04-08 21:54:22.133607000 -07:00
+  :failure: 
+  :duration_s: 0.001731
+  :status: :passed
+  :file_path: "./samples/rspec/meme_spec.rb"
+  :line_number: 21
+  :fingerprint: Meme#will_it_blend? is expected not to include "no"
+- :started_at: *1
+  :ended_at: *2
+  :failure: 
+  :duration_s: 3.0e-05
+  :status: :skipped
+  :file_path: "./samples/rspec/meme_spec.rb"
+  :line_number: 24
+  :fingerprint: Meme test that will be skipped
