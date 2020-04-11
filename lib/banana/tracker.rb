@@ -7,6 +7,7 @@ class Banana::Tracker
     super
     @suite_stats = {}
     @test_stats = []
+    @client = Banana.client
   end
 
   def record_suite_stats(started_at: nil, ended_at: nil, load_time_s: nil, status: nil, duration_s: nil)
@@ -38,21 +39,16 @@ class Banana::Tracker
 
   def report
     self.record_suite_stats(status: suite_status)
-    write_file(@suite_stats.merge(executions: @test_stats))
+    
     puts "Recorded results at tpm.yaml"
   end
 
   def suite_started_at
     @suite_stats[:started_at]
+    @client.upload_suite_results(@suite_stats.merge(executions: @test_stats))
   end
   
   private
-  def write_file data
-    require "Psych"
-    File.open('tpm.yaml', 'w') do |file|
-      file.write(Psych.dump(data))
-    end
-  end
 
   def suite_status
     return :failed if @test_stats.any? { |t| t[:status] == :failed } || @test_stats.count == 0

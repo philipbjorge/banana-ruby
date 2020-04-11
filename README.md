@@ -38,3 +38,11 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Consider
+Next Steps
+ - API Client
+ - Build API
+
+https://github.com/KnapsackPro/knapsack_pro-ruby/tree/master/lib/knapsack_pro/repository_adapters
+https://github.com/KnapsackPro/knapsack_pro-ruby/tree/master/lib/knapsack_pro/config

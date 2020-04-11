@@ -5,6 +5,7 @@ require "banana/frameworks"
 require "banana/time"
 require "banana/tracker"
 require "banana/bootstrap"
+require "banana/client"
 
 module Banana
   class << self 
@@ -13,8 +14,12 @@ module Banana
     include Frameworks
     include Time
     include Bootstrap
+    include Client
     def tracker
       Tracker.instance
+    end
+    def client
+      Client.instance
     end
   end
 end
